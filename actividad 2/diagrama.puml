@@ -1,0 +1,36 @@
+@startuml
+
+enum TipoCuenta {
+AHORROS
+CORRIENTE
+}
+
+class Cuenta {
+
+nombres : str
+
+apellidos : str
+
+numero_cuenta : str
+
+tipo_cuenta : TipoCuenta
+
+saldo : float
+--
+
+imprimir()
+
+consultar_saldo()
+
+depositar(cantidad : float) : bool
+
+retirar(cantidad : float) : bool
+
+mostrar_informacion()
+
+calcular_interes(tasa_interes : float) : float
+}
+
+Cuenta --> TipoCuenta
+
+@enduml
